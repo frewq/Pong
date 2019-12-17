@@ -14,5 +14,5 @@ func _process(delta):
 func _physics_process(delta):
 	if direccion.length() > 0:
 		direccion = direccion.normalized() * velocidad
-		move_and_slide(direccion * (1 + delta))
+		move_and_collide(direccion * delta)
 #		move_and_slide(direccion * (1 + delta) * velocidad)
