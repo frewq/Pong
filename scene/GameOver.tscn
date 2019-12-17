@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scene/GameOver.gd" type="Script" id=1]
+[ext_resource path="res://scene/new_dynamicfont.tres" type="DynamicFont" id=2]
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -88.0
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -107.5
+margin_bottom = 107.5
+alignment = 1
+
+[node name="MensajeResultado" type="Label" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+align = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 71.0
+margin_right = 1024.0
+margin_bottom = 138.0
+custom_fonts/font = ExtResource( 2 )
+text = "Intentar otra vez"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 142.0
+margin_right = 1024.0
+margin_bottom = 215.0
+custom_constants/separation = 75
+alignment = 1
+
+[node name="BotonJugarOtraVez" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 245.0
+margin_right = 517.0
+margin_bottom = 73.0
+custom_fonts/font = ExtResource( 2 )
+text = "Otra vez"
+
+[node name="BotonSalir" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 592.0
+margin_right = 779.0
+margin_bottom = 73.0
+custom_fonts/font = ExtResource( 2 )
+text = "Salir"
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BotonJugarOtraVez" to="." method="_on_BotonJugarOtraVez_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BotonSalir" to="." method="_on_BotonSalir_pressed"]

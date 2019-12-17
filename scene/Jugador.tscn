@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Jugador.gd" type="Script" id=1]
 [ext_resource path="res://Jugador.png" type="Texture" id=2]
-[ext_resource path="res://scene/ComponenteEntradasJugador.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.32636, 30 )
@@ -19,6 +18,3 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-
-[node name="ComponenteEntradasJugador" type="Node" parent="."]
-script = ExtResource( 3 )

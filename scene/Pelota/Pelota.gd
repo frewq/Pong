@@ -10,7 +10,7 @@ var direccion = Vector2()
 
 func _ready():
 	randomize()
-	set_direccion_inicial()
+#	set_direccion_inicial()
 
 func set_direccion_inicial():
 	var random_x = 0

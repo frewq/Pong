@@ -10,18 +10,24 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "AIEntradaComponente",
+"language": "GDScript",
+"path": "res://scene/AIEntradaComponente.gd"
+}, {
+"base": "Node",
 "class": "ComponenteEntradasJugador",
 "language": "GDScript",
 "path": "res://scene/ComponenteEntradasJugador.gd"
 } ]
 _global_script_class_icons={
+"AIEntradaComponente": "",
 "ComponenteEntradasJugador": ""
 }
 
 [application]
 
 config/name="Pong"
-run/main_scene="res://scene/Cancha.tscn"
+run/main_scene="res://scene/Juego.tscn"
 config/icon="res://icon.png"
 
 [input]
